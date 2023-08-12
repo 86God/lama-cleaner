@@ -7,7 +7,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"/>
     <meta name="theme-color" content="#ffffff"/>
-    <title>lama-cleaner - Image inpainting powered by SOTA AI model</title>
+    <title>图片修复</title>
     <script defer="defer" src="/static/js/main.ca662570.js"></script>
     <link href="/static/css/main.e24c9a9b.css" rel="stylesheet">
 </head>
@@ -15,4 +15,21 @@
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
 </body>
+<script>
+    var mo = function (e) {
+        e.preventDefault();
+    };
+
+    function stop() {
+        document.body.style.overflow = 'hidden'; // 隐藏滚动条
+
+        var d = document.getElementsByClassName("react-transform-component");
+        d.addEventListener("touchmove", mo, {
+            passive: false
+        }); //禁止页面滑动
+    }
+
+    //直接默认不让滑动
+    stop();
+</script>
 </html>

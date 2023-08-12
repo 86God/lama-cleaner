@@ -26455,6 +26455,7 @@
 				},
 
 				touchEnd = function(e) {
+					e.passive = false;
 					console.log("鼠标touchEnd");
 					if (C) {
 						var t = touchMove(e),
@@ -26464,7 +26465,6 @@
 				},
 
 				Ot = function(e) {
-					console.log("鼠标onMouseDown");
 					if (!C && (!ke && !Ce && q.src && (null === J || void 0 === J ? void 0 : J.canvas) && !m && !zc(e)))
 						if (Vc(e)) _e(!0);
 						else if (!(b && a.showCroper && (t = dE(e), t.x < f.x || t.y < f.y || t.x > f.x + f.width || t.y > f.y + f.height))) {
@@ -26479,7 +26479,6 @@
 					}
 				},
 				touchStart = function(e) {
-					console.log("鼠标touchStart");
 					if (!C && (!ke && !Ce && q.src && (null === J || void 0 === J ? void 0 : J.canvas) && !m && !zc(e)))
 						if (Vc(e)) _e(!0);
 						else if (!(b && a.showCroper && (t = touchMove(e), t.x < f.x || t.y < f.y || t.x > f.x + f.width || t.y > f.y + f.height))) {
